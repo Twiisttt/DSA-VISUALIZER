@@ -14,3 +14,8 @@ body {
 #stackContainer {
   margin-top: 20px;
 }
+
+.stackBox {
+  transition: all 0.3s ease;
+}
+

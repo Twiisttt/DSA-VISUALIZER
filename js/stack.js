@@ -1,5 +1,7 @@
 let stack = [];
 
+let operations = 0;
+
 function pushStack() {
   let value = document.getElementById("stackInput").value;
 
@@ -9,8 +11,23 @@ function pushStack() {
   }
 
   stack.push(value);
+  operations++;
+  updateCounter();
   drawStack();
 }
+
+function popStack() {
+  if (stack.length === 0) {
+    alert("Stack is empty! Cannot POP.");
+    return;
+  }
+
+  stack.pop();
+  operations++;
+  updateCounter();
+  drawStack();
+}
+
 
 function drawStack() {
   let container = document.getElementById("stackContainer");
@@ -23,3 +40,9 @@ function drawStack() {
     container.appendChild(box);
   }
 }
+
+function updateCounter() {
+  document.getElementById("opCounter").innerText =
+    "Operations: " + operations;
+}
+
