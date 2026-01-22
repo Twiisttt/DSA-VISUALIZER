@@ -9,7 +9,9 @@ body {
   margin: 5px auto;
   background-color: lightblue;
   border: 2px solid black;
+  transition: all var(--speed) ease;
 }
+
 
 #stackContainer {
   margin-top: 20px;
@@ -17,5 +19,16 @@ body {
 
 .stackBox {
   transition: all 0.3s ease;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
 }
 

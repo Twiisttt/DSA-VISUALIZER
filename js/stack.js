@@ -1,4 +1,10 @@
 let stack = [];
+let MAX_SIZE = 5;
+let learningMode = true;
+
+document.documentElement.style.setProperty("--speed", "0.5s");
+
+
 
 let operations = 0;
 
@@ -7,6 +13,12 @@ function pushStack() {
 
   if (value === "") {
     alert("Enter a value first");
+    return;
+  }
+
+   // Overflow check
+  if (stack.length === MAX_SIZE) {
+    alert("Stack Overflow! Max size = " + MAX_SIZE);
     return;
   }
 
@@ -45,4 +57,20 @@ function updateCounter() {
   document.getElementById("opCounter").innerText =
     "Operations: " + operations;
 }
+
+function toggleMode() {
+  learningMode = !learningMode;
+
+  let btn = document.getElementById("modeBtn");
+
+  if (learningMode) {
+    document.documentElement.style.setProperty("--speed", "0.5s");
+    btn.innerText = "Mode: Learning";
+  } else {
+    document.documentElement.style.setProperty("--speed", "0.1s");
+    btn.innerText = "Mode: Fast";
+  }
+}
+
+
 
