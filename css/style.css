@@ -32,3 +32,13 @@ input {
   margin: 5px;
 }
 
+
+.queueBox {
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+  background-color: lightcoral;
+  border: 2px solid black;
+}
+

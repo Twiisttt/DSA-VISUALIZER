@@ -24,11 +24,27 @@
   Mode: Learning
   </button>
 
+<hr>
+
+<h2>Queue Visualizer</h2>
+
+<input id="queueInput" type="text" placeholder="Enter value">
+
+<button onclick="enqueue()">ENQUEUE</button>
+<button onclick="dequeue()">DEQUEUE</button>
+
+<p id="queueCounter">Operations: 0</p>
+<p id="queueComplexity">
+  Time: ENQUEUE = O(1), DEQUEUE = O(1) | Space: O(n)
+</p>
+
+ <div id="queueContainer"></div>
 
 
   <div id="stackContainer"></div>
 
   <script src="js/stack.js"></script>
+  <script src="js/queue.js"></script>
 
 </body>
 </html>
