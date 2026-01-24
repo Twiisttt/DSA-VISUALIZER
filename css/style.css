@@ -42,3 +42,18 @@ input {
   border: 2px solid black;
 }
 
+#sortContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.sortBar {
+  width: 20px;
+  margin: 2px;
+  background-color: steelblue;
+  transition: height var(--speed) ease;
+}
+

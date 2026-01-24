@@ -38,13 +38,24 @@
   Time: ENQUEUE = O(1), DEQUEUE = O(1) | Space: O(n)
 </p>
 
- <div id="queueContainer"></div>
+<hr>
 
+<h2>Sorting Visualizer (Bubble Sort)</h2>
 
-  <div id="stackContainer"></div>
+<button onclick="generateArray()">Generate Array</button>
+<button onclick="bubbleSort()">Bubble Sort</button>
+
+<p id="sortCounter">Comparisons: 0</p>
+<p id="sortComplexity">Time: O(n²) | Space: O(1)</p>
+
+  
+<div id="sortContainer"></div>
+<div id="queueContainer"></div>
+<div id="stackContainer"></div>
 
   <script src="js/stack.js"></script>
   <script src="js/queue.js"></script>
+  <script src="js/sorting.js"></script>
 
 </body>
 </html>
