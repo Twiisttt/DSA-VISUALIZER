@@ -53,7 +53,7 @@ input {
 .sortBar {
   width: 20px;
   margin: 2px;
-  background-color: steelblue;
-  transition: height var(--speed) ease;
+  transition: height var(--speed) ease, background-color var(--speed) ease;
 }
+
 
