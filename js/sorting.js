@@ -1,5 +1,83 @@
 let arr = [];
+let callStack = [];
 let comparisons = 0;
+
+function drawCallStack() {
+  let container = document.getElementById("callStack");
+  container.innerHTML = "";
+
+  for (let i = callStack.length - 1; i >= 0; i--) {
+    let frame = document.createElement("div");
+    frame.className = "stackFrame";
+    frame.innerText = callStack[i];
+    container.appendChild(frame);
+  }
+}
+
+function pushFrame(text) {
+  callStack.push(text);
+  drawCallStack();
+}
+
+function popFrame() {
+  callStack.pop();
+  drawCallStack();
+}
+
+async function mergeSortWrapper() {
+  callStack = [];
+  drawCallStack();
+  await mergeSort(0, arr.length - 1);
+}
+
+async function mergeSort(left, right) {
+  pushFrame(`mergeSort(${left}, ${right})`);
+  await sleep(learningMode ? 500 : 100);
+
+  if (left >= right) {
+    popFrame();
+    return;
+  }
+
+  let mid = Math.floor((left + right) / 2);
+
+  await mergeSort(left, mid);
+  await mergeSort(mid + 1, right);
+
+  await merge(left, mid, right);
+
+  popFrame();
+}
+
+async function merge(left, mid, right) {
+  let temp = [];
+  let i = left;
+  let j = mid + 1;
+
+  while (i <= mid && j <= right) {
+    comparisons++;
+    updateSortCounter();
+
+    drawArray(i, j);
+    await sleep(learningMode ? 500 : 100);
+
+    if (arr[i] < arr[j]) {
+      temp.push(arr[i++]);
+    } else {
+      temp.push(arr[j++]);
+    }
+  }
+
+  while (i <= mid) temp.push(arr[i++]);
+  while (j <= right) temp.push(arr[j++]);
+
+  for (let k = 0; k < temp.length; k++) {
+    arr[left + k] = temp[k];
+    drawArray(left + k);
+    await sleep(learningMode ? 300 : 80);
+  }
+}
+
 
 function generateArray() {
   arr = [];
@@ -110,7 +188,9 @@ function startSort() {
 
   if (algo === "bubble") {
     bubbleSort();
-  } else {
+  }else if (algo === "merge") {
+  mergeSortWrapper();
+  }else {
     selectionSort();
   }
 }
