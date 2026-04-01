@@ -58,7 +58,26 @@
 <p id="sortCounter">Comparisons: 0</p>
 <p id="sortComplexity">Time: O(n²) | Space: O(1)</p>
 
-  
+<hr>
+
+<h2>Search Visualizer</h2>
+
+<input id="searchInput" type="text" placeholder="Enter target">
+
+<button onclick="generateSearchArray()">Generate Array</button>
+
+<select id="searchAlgo">
+  <option value="linear">Linear Search</option>
+  <option value="binary">Binary Search</option>
+</select>
+
+<button onclick="startSearch()">Search</button>
+
+<p id="searchCounter">Comparisons: 0</p>
+<p id="searchResult"></p>
+
+
+<div id="searchContainer"></div>
 <div id="sortContainer"></div>
 <div id="queueContainer"></div>
 <div id="stackContainer"></div>
@@ -66,6 +85,7 @@
   <script src="js/stack.js"></script>
   <script src="js/queue.js"></script>
   <script src="js/sorting.js"></script>
+  <script src="js/search.js"></script>
 
 </body>
 </html>
