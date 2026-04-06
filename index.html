@@ -6,103 +6,34 @@
 </head>
 <body>
 
-  <h1 class="mainTitle">DSA Visualizer</h1>
-  <p class="tagline">Learn Data Structures & Algorithms Visually</p>
+<h1 class="mainTitle">DSA Visualizer</h1>
+<p class="tagline">Learn Data Structures & Algorithms Visually</p>
 
+<div class="cardContainer">
 
-  <div class="navButtons">
-  <button onclick="scrollToSection('stackSection')">Stack</button>
-  <button onclick="scrollToSection('queueSection')">Queue</button>
-  <button onclick="scrollToSection('sortingSection')">Sorting</button>
-  <button onclick="scrollToSection('searchSection')">Search</button>
-</div>
-
-  <div id="stackSection">
-  <h2>Stack Visualizer</h2>
-
-  <input id="stackInput" type="text" placeholder="Enter value">
-
-  <button onclick="pushStack()">PUSH</button>
-
-  <button onclick="popStack()">POP</button>
-
-  <p id="opCounter">Operations: 0</p>
-
-  <p id="complexity">
-  Time: PUSH = O(1), POP = O(1) | Space: O(n)
-  </p>
-
-  <button onclick="toggleMode()" id="modeBtn">
-  Mode: Learning
-  </button>
+  <div class="card stackCard" onclick="goToPage('stack.html')">
+    <h2>STACK</h2>
+    <p>LIFO Structure</p>
   </div>
-<hr>
 
-<div id="queueSection">
-<h2>Queue Visualizer</h2>
+  <div class="card queueCard" onclick="goToPage('queue.html')">
+    <h2>QUEUE</h2>
+    <p>FIFO Structure</p>
+  </div>
 
-<input id="queueInput" type="text" placeholder="Enter value">
-<button onclick="enqueue()">ENQUEUE</button>
-<button onclick="dequeue()">DEQUEUE</button>
+  <div class="card sortCard" onclick="goToPage('sorting.html')">
+    <h2>SORTING</h2>
+    <p>Algorithms</p>
+  </div>
 
-<p id="queueCounter">Operations: 0</p>
-<p id="queueComplexity">
-  Time: ENQUEUE = O(1), DEQUEUE = O(1) | Space: O(n)
-</p>
-</div>
-<hr>
+  <div class="card searchCard" onclick="goToPage('search.html')">
+    <h2>SEARCH</h2>
+    <p>Find Elements</p>
+  </div>
 
-<div id="sortingSection">
-<h2>Sorting Visualizer (Bubble Sort)</h2>
-
-<button onclick="generateArray()">Generate Array</button>
-
-<select id="algoSelect">
-  <option value="merge">Merge Sort</option>
-  <option value="bubble">Bubble Sort</option>
-  <option value="selection">Selection Sort</option>
-</select>
-
-<button onclick="startSort()">Sort</button>
-
-<h3>Call Stack (Recursion)</h3>
-<div id="callStack"></div>
-
-
-<p id="sortCounter">Comparisons: 0</p>
-<p id="sortComplexity">Time: O(n²) | Space: O(1)</p>
-</div>
-<hr>
-
-<div id="searchSection">
-<h2>Search Visualizer</h2>
-
-<input id="searchInput" type="text" placeholder="Enter target">
-
-<button onclick="generateSearchArray()">Generate Array</button>
-
-<select id="searchAlgo">
-  <option value="linear">Linear Search</option>
-  <option value="binary">Binary Search</option>
-</select>
-
-<button onclick="startSearch()">Search</button>
-
-<p id="searchCounter">Comparisons: 0</p>
-<p id="searchResult"></p>
 </div>
 
-<button onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
-<div id="searchContainer"></div>
-<div id="sortContainer"></div>
-<div id="queueContainer"></div>
-<div id="stackContainer"></div>
-
-  <script src="js/stack.js"></script>
-  <script src="js/queue.js"></script>
-  <script src="js/sorting.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/ui.js"></script>
+<script src="js/ui.js"></script>
 
 </body>
 </html>

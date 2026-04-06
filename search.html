@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Visualizer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Search Visualizer</h1>
+<button onclick="goToPage('index.html')">⬅ Back Home</button>
+
+<input id="searchInput" type="text" placeholder="Enter target">
+
+<button onclick="generateSearchArray()">Generate Array</button>
+
+<select id="searchAlgo">
+  <option value="linear">Linear Search</option>
+  <option value="binary">Binary Search</option>
+</select>
+
+<button onclick="startSearch()">Search</button>
+
+<p id="searchCounter">Comparisons: 0</p>
+<p id="searchResult"></p>
+
+<div id="searchContainer"></div>
+
+<script src="js/search.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+</html>

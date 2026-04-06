@@ -4,6 +4,10 @@ function scrollToSection(id) {
   });
 }
 
+function goToPage(page) {
+  window.location.href = page;
+}
+
 let darkMode = false;
 
 function toggleTheme() {

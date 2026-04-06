@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Sorting Visualizer</h1>
+<button onclick="goToPage('index.html')">⬅ Back Home</button>
+
+<button onclick="generateArray()">Generate Array</button>
+
+<select id="algoSelect">
+  <option value="bubble">Bubble Sort</option>
+  <option value="selection">Selection Sort</option>
+  <option value="merge">Merge Sort</option>
+</select>
+
+<button onclick="startSort()">Sort</button>
+
+<p id="sortCounter">Comparisons: 0</p>
+
+<div id="sortContainer"></div>
+
+<h3>Call Stack</h3>
+<div id="callStack"></div>
+
+<script src="js/sorting.js"></script>
+<script src="js/ui.js"></script>
+
+</body>
+</html>
