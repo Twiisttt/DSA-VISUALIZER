@@ -1,5 +1,6 @@
 let searchArr = [];
 let searchComparisons = 0;
+let learningMode = true;
 
 function generateSearchArray() {
   searchArr = [];
@@ -98,4 +99,8 @@ async function binarySearch() {
 function updateSearchCounter() {
   document.getElementById("searchCounter").innerText =
     "Comparisons: " + searchComparisons;
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
