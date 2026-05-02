@@ -197,10 +197,17 @@ button:hover {
 
 
 .navLinks a:hover {
-  color: #000;
+  color: black;
+  transform: scale(1.05);
 }
 
 .navLinks a.active {
   border-bottom: 2px solid white;
 }
 
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
