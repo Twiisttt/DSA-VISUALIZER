@@ -70,6 +70,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  padding-top: 20px;
   background: linear-gradient(135deg, #dbeafe, #e0f7fa);
 }
 
@@ -170,3 +171,36 @@ button:hover {
 .searchCard {
   border-top: 5px solid #667eea;
 }
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px; /* reduce stretch */
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px; /* better spacing */
+}
+
+.navLeft {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.navLinks a:hover {
+  color: #000;
+}
+
+.navLinks a.active {
+  border-bottom: 2px solid white;
+}
+
