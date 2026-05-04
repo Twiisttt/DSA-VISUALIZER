@@ -1,6 +1,7 @@
 let arr = [];
 let callStack = [];
 let comparisons = 0;
+let learningMode = true;
 
 function drawCallStack() {
   let container = document.getElementById("callStack");
@@ -183,14 +184,16 @@ function startSort() {
 
   document.getElementById("sortComplexity").innerText =
     algo === "bubble"
-      ? "Time: O(n²) | Space: O(1) — Bubble Sort"
-      : "Time: O(n²) | Space: O(1) — Selection Sort";
+      ? "Time: O(n^2) | Space: O(1) - Bubble Sort"
+      : algo === "selection"
+      ? "Time: O(n^2) | Space: O(1) - Selection Sort"
+      : "Time: O(n log n) | Space: O(n) - Merge Sort";
 
   if (algo === "bubble") {
     bubbleSort();
-  }else if (algo === "merge") {
-  mergeSortWrapper();
-  }else {
+  } else if (algo === "merge") {
+    mergeSortWrapper();
+  } else {
     selectionSort();
   }
 }

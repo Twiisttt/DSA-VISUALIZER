@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+<body>
+
+<!-- NAVBAR (inside body) -->
 <nav class="navbar">
   <div class="navLeft">DSA Visualizer</div>
 
@@ -12,15 +15,12 @@
     <a href="index.html">Home</a>
     <a href="stack.html">Stack</a>
     <a href="queue.html">Queue</a>
-    <a href="sorting.html">Sorting</a>
+    <a href="sorting.html" class="active">Sorting</a>
     <a href="search.html">Search</a>
   </div>
 </nav>
 
-<body>
-
 <h1>Sorting Visualizer</h1>
-
 
 <button onclick="generateArray()">Generate Array</button>
 
@@ -33,6 +33,7 @@
 <button onclick="startSort()">Sort</button>
 
 <p id="sortCounter">Comparisons: 0</p>
+<p id="sortComplexity"></p>
 
 <div id="sortContainer"></div>
 
@@ -43,6 +44,4 @@
 <script src="js/ui.js"></script>
 
 </body>
-
-
 </html>
