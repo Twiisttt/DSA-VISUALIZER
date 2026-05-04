@@ -197,3 +197,58 @@ function startSort() {
     selectionSort();
   }
 }
+
+questions = [
+  {
+    question: "Time complexity of Bubble Sort?",
+    options: ["O(n)", "O(n log n)", "O(n^2)"],
+    answer: 2
+  },
+  {
+    question: "Which is fastest sorting?",
+    options: ["Bubble", "Merge", "Selection"],
+    answer: 1
+  },
+  {
+    question: "Merge sort uses?",
+    options: ["Greedy", "Divide & Conquer", "DP"],
+    answer: 1
+  },
+  {
+    question: "Bubble sort is?",
+    options: ["Stable", "Unstable", "Random"],
+    answer: 0
+  },
+  {
+    question: "Selection sort swaps?",
+    options: ["Every time", "Once per iteration", "Never"],
+    answer: 1
+  },
+  {
+    question: "Worst case of bubble?",
+    options: ["O(n)", "O(n^2)", "O(log n)"],
+    answer: 1
+  },
+  {
+    question: "Merge sort space?",
+    options: ["O(1)", "O(n)", "O(log n)"],
+    answer: 1
+  },
+  {
+    question: "Bubble compares?",
+    options: ["Adjacent", "Random", "All"],
+    answer: 0
+  },
+  {
+    question: "Stable sort?",
+    options: ["Keeps order", "Breaks order", "Random"],
+    answer: 0
+  },
+  {
+    question: "Divide step in merge?",
+    options: ["Split array", "Sort array", "Print"],
+    answer: 0
+  }
+];
+
+loadQuestion();

@@ -72,5 +72,19 @@ function toggleMode() {
   }
 }
 
+questions = [
+  { question: "Stack follows?", options: ["FIFO", "LIFO", "Random"], answer: 1 },
+  { question: "Push adds?", options: ["top", "bottom", "middle"], answer: 0 },
+  { question: "Pop removes?", options: ["top", "bottom", "middle"], answer: 0 },
+  { question: "Overflow?", options: ["full", "empty", "half"], answer: 0 },
+  { question: "Underflow?", options: ["empty", "full", "half"], answer: 0 },
+  { question: "Stack used in?", options: ["recursion", "queue", "graph"], answer: 0 },
+  { question: "Top pointer?", options: ["last", "first", "none"], answer: 0 },
+  { question: "Stack TC?", options: ["O(1)", "O(n)", "O(log n)"], answer: 0 },
+  { question: "Peek?", options: ["see top", "remove", "add"], answer: 0 },
+  { question: "Stack DS?", options: ["linear", "tree", "graph"], answer: 0 }
+];
+
+loadQuestion();
 
 

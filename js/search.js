@@ -104,3 +104,18 @@ function updateSearchCounter() {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+questions = [
+  { question: "Binary search works on?", options: ["Sorted", "Unsorted", "Any"], answer: 0 },
+  { question: "Binary search TC?", options: ["O(n)", "O(log n)", "O(n^2)"], answer: 1 },
+  { question: "Linear search TC?", options: ["O(n)", "O(log n)", "O(1)"], answer: 0 },
+  { question: "Binary uses?", options: ["Recursion", "Divide", "Loop"], answer: 1 },
+  { question: "Mid formula?", options: ["(l+r)/2", "l*r", "l+r"], answer: 0 },
+  { question: "Search fails when?", options: ["found", "l>r", "mid"], answer: 1 },
+  { question: "Binary faster because?", options: ["skip half", "loop", "sort"], answer: 0 },
+  { question: "Linear checks?", options: ["all", "half", "none"], answer: 0 },
+  { question: "Binary needs?", options: ["sorted", "unsorted", "random"], answer: 0 },
+  { question: "Best case binary?", options: ["O(1)", "O(n)", "O(log n)"], answer: 0 }
+];
+
+loadQuestion();

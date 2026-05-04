@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Sorting Visualizer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -37,11 +38,24 @@
 
 <div id="sortContainer"></div>
 
+<h2>Practice Questions</h2>
+
+<div id="questionBox">
+  <p id="questionText"></p>
+
+  <button onclick="checkAnswer(0)"></button>
+  <button onclick="checkAnswer(1)"></button>
+  <button onclick="checkAnswer(2)"></button>
+
+  <p id="quizResult"></p>
+</div>
+
 <h3>Call Stack</h3>
 <div id="callStack"></div>
 
 <script src="js/sorting.js"></script>
 <script src="js/ui.js"></script>
+<script src="js/quiz.js"></script>
 
 </body>
 </html>

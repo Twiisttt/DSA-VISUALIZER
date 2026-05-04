@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Search Visualizer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,8 +40,21 @@
 
 <div id="searchContainer"></div>
 
+<h2>Practice Questions</h2>
+
+<div id="questionBox">
+  <p id="questionText"></p>
+
+  <button onclick="checkAnswer(0)"></button>
+  <button onclick="checkAnswer(1)"></button>
+  <button onclick="checkAnswer(2)"></button>
+
+  <p id="quizResult"></p>
+</div>
+
 <script src="js/search.js"></script>
 <script src="js/ui.js"></script>
+<script src="js/quiz.js"></script>
 
 </body>
 
