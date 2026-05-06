@@ -30,19 +30,21 @@ function checkAnswer(selected) {
     document.getElementById("quizResult").innerText = "❌ Wrong";
   }
 
+  localStorage.setItem("quizScore",score);
+
   currentQ++;
   setTimeout(loadQuestion, 800);
 }
 
 questions = [
   { question: "Queue follows?", options: ["FIFO", "LIFO", "Random"], answer: 0 },
-  { question: "Enqueue?", options: ["add rear", "add front", "remove"], answer: 2 },
+  { question: "Enqueue?", options: ["add rear", "add front", "remove"], answer: 0 },
   { question: "Dequeue?", options: ["remove front", "remove rear", "add"], answer: 0 },
-  { question: "Overflow?", options: ["full", "empty", "half"], answer: 1 },
-  { question: "Underflow?", options: ["empty", "full", "half"], answer: 3 },
-  { question: "Queue used in?", options: ["BFS", "DFS", "stack"], answer: 2 },
+  { question: "Overflow?", options: ["full", "empty", "half"], answer: 0 },
+  { question: "Underflow?", options: ["empty", "full", "half"], answer: 0 },
+  { question: "Queue used in?", options: ["BFS", "DFS", "stack"], answer: 0 },
   { question: "Front pointer?", options: ["start", "end", "middle"], answer: 0 },
-  { question: "Queue TC?", options: ["O(1)", "O(n)", "O(log n)"], answer: 1 },
+  { question: "Queue TC?", options: ["O(1)", "O(n)", "O(log n)"], answer: 0 },
   { question: "FIFO means?", options: ["first out", "last out", "random"], answer: 0 },
   { question: "Queue DS?", options: ["linear", "tree", "graph"], answer: 0 }
 ];

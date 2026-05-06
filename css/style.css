@@ -211,3 +211,40 @@ button:hover {
   font-weight: 500;
   transition: 0.3s;
 }
+
+/* DARK MODE */
+
+.darkMode {
+  background: #121212;
+  color: white;
+}
+
+.darkMode .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.darkMode .card p {
+  color: #ccc;
+}
+
+.darkMode .navbar {
+  background: linear-gradient(135deg, #232526, #414345);
+}
+
+.darkMode #questionBox {
+  background: #1e1e1e;
+  color: white;
+}
+
+.darkMode button {
+  background: #333;
+  color: white;
+}
+
+.darkMode input,
+.darkMode select {
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+}

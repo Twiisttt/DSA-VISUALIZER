@@ -119,3 +119,5 @@ questions = [
 ];
 
 loadQuestion();
+
+localStorage.setItem("searchVisited", true);

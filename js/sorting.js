@@ -252,3 +252,5 @@ questions = [
 ];
 
 loadQuestion();
+
+localStorage.setItem("sortingVisited", true);

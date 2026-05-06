@@ -87,4 +87,4 @@ questions = [
 
 loadQuestion();
 
-
+localStorage.setItem("stackVisited", true);

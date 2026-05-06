@@ -56,3 +56,5 @@ function updateQueueCounter() {
   document.getElementById("queueCounter").innerText =
     "Operations: " + queueOps;
 }
+
+localStorage.setItem("queueVisited", true);

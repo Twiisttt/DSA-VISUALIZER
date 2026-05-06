@@ -9,6 +9,7 @@
 <nav class="navbar">
   <div class="navLeft">DSA Visualizer</div>
 
+  
   <div class="navLinks">
     <a href="index.html">Home</a>
     <a href="stack.html">Stack</a>
@@ -16,6 +17,10 @@
     <a href="sorting.html">Sorting</a>
     <a href="search.html">Search</a>
   </div>
+
+  <button onclick="toggleTheme()" id="themeBtn">
+  🌙 Dark Mode
+</button>
 </nav>
 
 <body>
@@ -47,7 +52,19 @@
 
 </div>
 
+<h2>Your Progress</h2>
+
+<div id="progressBox">
+  <p id="stackProgress"></p>
+  <p id="queueProgress"></p>
+  <p id="sortingProgress"></p>
+  <p id="searchProgress"></p>
+  <p id="quizScoreDisplay"></p>
+</div>
+
 <script src="js/ui.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/theme.js"></script>
 
 </body>
 
