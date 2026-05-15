@@ -2,6 +2,15 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
+  getFirestore,
+  setDoc,
+  doc,
+  getDoc
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
@@ -22,6 +31,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 // SIGN UP
 window.signUp = function () {
@@ -65,7 +75,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 // CHECK LOGIN STATUS
-onAuthStateChanged(auth, (user) => {
+// CHECK LOGIN STATUS
+onAuthStateChanged(auth, async (user) => {
 
   if (user) {
 
@@ -76,6 +87,12 @@ onAuthStateChanged(auth, (user) => {
         "👤 " + user.email;
     }
 
+    // SAVE USER DATA
+    await setDoc(doc(db, "users", user.uid), {
+      email: user.email,
+      lastLogin: new Date().toISOString()
+    });
+
   } else {
 
     // Redirect if not logged in
@@ -83,6 +100,7 @@ onAuthStateChanged(auth, (user) => {
       window.location.href = "login.html";
     }
   }
+
 });
 
 // LOGOUT
