@@ -197,7 +197,7 @@ function startSort() {
   }
 }
 
-questions = [
+const questions = [
   {
     question: "Time complexity of Bubble Sort?",
     options: ["O(n)", "O(n log n)", "O(n^2)"],
@@ -253,3 +253,7 @@ questions = [
 loadQuestion();
 
 localStorage.setItem("sortingVisited", true);
+
+// Make functions accessible to HTML
+window.generateArray = generateArray;
+window.startSort = startSort;
