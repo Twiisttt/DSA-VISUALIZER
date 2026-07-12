@@ -1,3 +1,5 @@
+import { sleep } from "./utils.js";
+
 let arr = [];
 let callStack = [];
 let comparisons = 0;
@@ -115,9 +117,6 @@ function drawArray(highlight1 = -1, highlight2 = -1, sortedIndex = -1) {
 }
 
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 async function bubbleSort() {
   for (let i = 0; i < arr.length; i++) {
